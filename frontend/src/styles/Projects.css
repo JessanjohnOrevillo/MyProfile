@@ -1,0 +1,154 @@
+.projects-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 30px;
+    background: #f4f7fb;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.projects-header h1 {
+    margin: 0 0 6px;
+    color: #1c2c4c;
+    font-size: 28px;
+}
+
+.projects-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.projects-add-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #00b894;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.projects-add-button:hover {
+    background: #00a383;
+}
+
+.projects-error {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.projects-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.projects-message {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-message h3 {
+    margin: 0 0 8px;
+    color: #1c2c4c;
+    font-size: 20px;
+}
+
+.projects-message p {
+    margin: 0 0 20px;
+    color: #6b7280;
+}
+
+.projects-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf0f4;
+    text-align: left;
+}
+
+.projects-table th {
+    background: #f8fafc;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.projects-table td {
+    color: #374151;
+    font-size: 14px;
+}
+
+.projects-table td strong {
+    color: #1c2c4c;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.project-status.published {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.project-status.draft {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.project-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.project-actions button {
+    padding: 7px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.project-actions button:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 700px) {
+    .projects-page {
+        padding: 20px;
+    }
+
+    .projects-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

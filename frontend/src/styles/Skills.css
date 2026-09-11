@@ -1,0 +1,352 @@
+.skills-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f4f7fb;
+}
+
+.skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.skills-header h1 {
+    margin: 0 0 6px;
+    color: #1c2c4c;
+    font-size: 28px;
+}
+
+.skills-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.skills-add-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #00b894;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.skills-add-button:hover {
+    background: #00a383;
+}
+
+.skills-add-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.skills-error {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.skills-form-card {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skills-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.skills-form-header h2 {
+    margin: 0 0 6px;
+    color: #1c2c4c;
+    font-size: 20px;
+}
+
+.skills-form-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.skills-close-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.skills-close-button:hover {
+    background: #e5e7eb;
+}
+
+.skills-close-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.skills-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 180px;
+    gap: 20px;
+}
+
+.skills-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills-form-field label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skills-form-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.skills-form-field input:focus {
+    border-color: #00b894;
+}
+
+.skills-proficiency-input {
+    position: relative;
+}
+
+.skills-proficiency-input input {
+    padding-right: 35px;
+}
+
+.skills-proficiency-input span {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.skills-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #edf0f4;
+}
+
+.skills-cancel-button,
+.skills-save-button {
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.skills-cancel-button {
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+}
+
+.skills-cancel-button:hover {
+    background: #f3f4f6;
+}
+
+.skills-save-button {
+    border: none;
+    background: #00b894;
+    color: #ffffff;
+}
+
+.skills-save-button:hover {
+    background: #00a383;
+}
+
+.skills-cancel-button:disabled,
+.skills-save-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.skills-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.skills-message {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills-message h3 {
+    margin: 0 0 8px;
+    color: #1c2c4c;
+    font-size: 20px;
+}
+
+.skills-message p {
+    margin: 0 0 20px;
+    color: #6b7280;
+}
+
+.skills-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf0f4;
+    text-align: left;
+}
+
+.skills-table th {
+    background: #f8fafc;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skills-table td {
+    color: #374151;
+    font-size: 14px;
+}
+
+.skills-table td strong {
+    color: #1c2c4c;
+}
+
+.skill-category {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #eefbf7;
+    color: #008f73;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.skill-proficiency {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+}
+
+.skill-progress {
+    width: 120px;
+    height: 7px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e5e7eb;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background: #00b894;
+}
+
+.skill-proficiency > span {
+    min-width: 40px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skills-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.skills-actions button {
+    padding: 7px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.skills-actions button:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 800px) {
+    .skills-page {
+        padding: 20px;
+    }
+
+    .skills-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skills-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .skills-cancel-button,
+    .skills-save-button {
+        width: 100%;
+    }
+}
+
+.skills-form-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.skills-form-field select:focus {
+    border-color: #00b894;
+}
