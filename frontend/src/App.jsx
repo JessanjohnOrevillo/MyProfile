@@ -3,7 +3,11 @@ import {
     Routes,
     Route,
     Navigate,
+    useLocation,
+    useNavigate,
 } from "react-router-dom";
+
+import { useEffect } from "react";
 
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -22,9 +26,32 @@ import ProjectDetails from "./pages/ProjectDetails";
 
 import AdminLayout from "./layouts/AdminLayout";
 
+function GitHubPagesRedirect() {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+        const redirect = params.get("redirect");
+
+        if (redirect) {
+            navigate(`/${redirect}`, {
+                replace: true,
+            });
+        }
+    }, [navigate]);
+
+    return null;
+}
+
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/MyProfile">
+            <GitHubPagesRedirect />
+
             <Routes>
 
                 {/* Public Home */}
@@ -57,10 +84,11 @@ function App() {
                     element={<PublicProjects />}
                 />
 
+                {/* Public Project Details */}
                 <Route
-                        path="/projects/:id"
-                        element={<ProjectDetails />}
-                    />
+                    path="/projects/:id"
+                    element={<ProjectDetails />}
+                />
 
                 {/* Admin */}
                 <Route
@@ -113,7 +141,7 @@ function App() {
                     path="*"
                     element={
                         <Navigate
-                            to="/admin/login"
+                            to="/"
                             replace
                         />
                     }

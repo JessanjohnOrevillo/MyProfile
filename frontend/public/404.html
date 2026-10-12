@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <script>
+        const base = "/MyProfile/";
+        const currentPath = window.location.pathname;
+        const currentSearch = window.location.search;
+
+        const route = currentPath.startsWith(base)
+            ? currentPath.slice(base.length)
+            : currentPath.replace(/^\/+/, "");
+
+        if (route && route !== "404.html") {
+            const redirectUrl =
+                base +
+                "?redirect=" +
+                encodeURIComponent(route + currentSearch);
+
+            window.location.replace(redirectUrl);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Loading...</p>
+</body>
+</html>
